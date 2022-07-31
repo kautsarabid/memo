@@ -1,9 +1,16 @@
 const toggle = document.querySelector('.menu-toggle input');
 const nav = document.querySelector('nav ul');
+const li = document.querySelectorAll('nav ul li');
 
 toggle.addEventListener('click', function () {
   nav.classList.toggle('slide');
 });
+
+for (let i = 0; i < li.length; i++) {
+  li[i].addEventListener('click', function () {
+    nav.classList.remove('slide');
+  });
+}
 
 // const trigger = document.querySelectorAll('.list');
 // const muncul = document.querySelector('.pop-up');
